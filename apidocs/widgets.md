@@ -3,7 +3,7 @@
 Apply classname and css_data to arbitrary widget
 	
 
-## class dflib.widgets.MessageDialog
+## `class dflib.widgets.MessageDialog`
 Ths class implments a MessageBox as a Gtk.Window
 
 	Constructor parameters:
@@ -18,7 +18,7 @@ Ths class implments a MessageBox as a Gtk.Window
 		Title and message must be set.
 	
 
-## class dflib.widgets.AboutDialog
+## `class dflib.widgets.AboutDialog`
  Display an AboutDialog implemented as a MessageDialog
 
 		kwargs:
@@ -29,7 +29,7 @@ Ths class implments a MessageBox as a Gtk.Window
 			buttons - list of buttons to show
 	
 
-## class dflib.widgets.Toggle
+## `class dflib.widgets.Toggle`
 Toggle is a control that has a label either above or to the left of the toggle button. 
 
 	kwargs:
@@ -40,7 +40,7 @@ Toggle is a control that has a label either above or to the left of the toggle b
 		callback - function to call on state change, receives button label text
 	
 
-### class dflib.widgets.ListBox
+### `class dflib.widgets.ListBox`
 Simplified interface for a GtkListBos
 
 	keyword arguments:
@@ -48,42 +48,31 @@ Simplified interface for a GtkListBos
 		onActivate: activated when a row is activated (double clicked) same as above
 	
 
-### dflib.widgets.ListBox.select_row_by_label
-
-
-		set the row with that has the label in text
+### `dflib.widgets.ListBox.select_row_by_label(self,text)`
+set the row with that has the label in text
 		
 
-### dflib.widgets.ListBox.remove_row_by_label
-
-
-		remove a row by the row's label
+### `dflib.widgets.ListBox.remove_row_by_label(self,label)`
+remove a row by the row's label
 		
 
-### dflib.widgets.ListBox..populate
-
-
-		Clear and reload the ListBox with items
+### `dflib.widgets.ListBox.populate(self,items)`
+Clear and reload the ListBox with items
 		
 
-### dflib.widgets.ListBox.on_row_activated
-
-
-		callack when row is activated. Call the supplied callback with the label
+### `dflib.widgets.ListBox.on_row_activated(self,widget,data)`
+Event handler to be activated by row activation. If there is a callback supplied by the 
+caller, the clalback is made.
 		
 
-### dflib.widgets.ListBox.on_row_selected
-
-
-		callack when row is selected. Call the supplied callback with the label
+### `dflib.widgets.ListBox.on_row_selected(self,widget,data)`
+Event handler to be activated when row is selected. Call the supplied callback with the label
 		
 
-### dflib.widgets.ListBox.get_selected_item
+### dflib.widgets.ListBox.get_selected_item(self):
+Get current selected row 
 
- get current selected row 
-
-
-## class dflib.widgets.LabeledEntry
+## `class dflib.widgets.LabeledEntry`
 LabeledEntry is a control that has a label either above or to the left of an entry field.
 
 	__init__ kwargs:
@@ -93,7 +82,7 @@ LabeledEntry is a control that has a label either above or to the left of an ent
 		callback - function to call on entry change
 	
 
-## class dflib.widgets.Button
+## `class dflib.widgets.Button`
 wrapper for gtk.Button
 
 	kwargs:
@@ -105,7 +94,7 @@ wrapper for gtk.Button
 		relief: wheter to use Gtk relief on the button
 	
 
-## class dflib.widgets.MenuBar
+## `class dflib.widgets.MenuBar`
 Dictionary driven menu_bar
 
 	MenuBar creates a set of menus based on the dictionary menu_items. 

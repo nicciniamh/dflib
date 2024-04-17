@@ -15,9 +15,7 @@
 		
 
 ### `RestClient.setup(server=server,host=host,sensor=sesor)`
-
-	set new options in kwargs for server, host and sensor. Any or all
-	may be specified.
+set new options in kwargs for server, host and sensor.
 
 	kwargs:
 		server - the server to connect to
@@ -26,21 +24,17 @@
 	
 
 ### `RestClient.read()`
-
-		get sensor data from host as json object
+get sensor data from host as json object
 		
 
 ### `RestClient.write(data)`
-
-		write data to sensor as json object
+write data to sensor as json object
 		
 
 ### `RestClient.list`
-
-		get list of sensors on host
+get list of sensors on host
 		
 
 ### `RestClient.hosts`
-
-		get a list of hosts the server knows about
+get a list of hosts the server knows about
 		
