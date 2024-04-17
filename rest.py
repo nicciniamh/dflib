@@ -18,7 +18,12 @@ stats = {
 
 class RestClient(object):
 	'''
-	This is the improved RESTapi interface as an class.
+	Encapsulate RESTful API 
+
+	kawargs:
+		server - server to communicate with
+		host - host on which the sensor resides
+		sensor - name of sensor 
 	'''
 	def __init__(self,**kwargs):
 		'''

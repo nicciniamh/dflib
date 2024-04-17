@@ -1,61 +1,46 @@
 # Notes for module dflib.rest
 ## RestClient
-
-
-	This is the improved RESTapi interface as an class.
+**Encapsulate RESTful API**
 	
 
-## __init__
+## class RestClient(object):
+### `_init__(server=server,host=host,sensor=sesor)`
 
+	
+	kwargs:
+		server - the server to connect to
+		host - the host on which the sensor resides
+		sensor - the sensor to interact with
 
 		
 
-## setup
+### `RestClient.setup(server=server,host=host,sensor=sesor)`
 
+	set new options in kwargs for server, host and sensor. Any or all
+	may be specified.
 
-		set new options in kwargs for server, host and sensor. Any or all
-		may be specified.
-		
+	kwargs:
+		server - the server to connect to
+		host - the host on which the sensor resides
+		sensor - the sensor to interact with
+	
 
-## _detailedError
-
-
-		build an error message and reutrn it. The exception and url are printed
-		and the response object is pretty printed from the dict representation of the
-		response object.
-		
-
-## _sendCommand
-
-
-		Send a formatted command to the server, return the response, or
-		return None on error. detailedError is called on exceptions.
-		command contains the url encoded command and parameters. These are sent
-		to server on port 4242.
-		
-
-## read
-
+### `RestClient.read()`
 
 		get sensor data from host as json object
 		
 
-## write
+### `RestClient.write(data)`
 
-
-		write sensor data to host as json object
+		write data to sensor as json object
 		
 
-## list
-
+### `RestClient.list`
 
 		get list of sensors on host
 		
 
-## hosts
-
+### `RestClient.hosts`
 
 		get a list of hosts the server knows about
 		
-
-
