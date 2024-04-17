@@ -1,4 +1,7 @@
 # Notes for module dflib.widgets
+
+For the most part, these are derived classes from Gtk. 
+
 ## function dflib.widgets._widget_set_css(widget, classname, css_data)
 Apply classname and css_data to arbitrary widget
 	
