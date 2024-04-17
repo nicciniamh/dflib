@@ -87,21 +87,6 @@ def error(*args):
 		tag = '\x1b[1;34;40mDEBUG\x1b[0m'
 		_output(caller,'\x1b[1;31;40mERROR\x1b[0m',*args)
 
-def dump_object_properties(obj,tag=None):
-	''' dump dict/object properties - dont use use dpprint instead '''
-	global debug_flag
-	if not type(obj) is dict:
-		obj = obj.__dict__
-	caller = inspect.getouterframes(inspect.currentframe(), 2)[1][3]
-	if not tag:
-		tag = f'{obj}'
-	if debug_flag:
-		props = []
-		for k,v in obj.items():
-			props.append(f'\t{k}={v}')
-		props = '\n'.join(props)
-		_output(caller,'\x1b[1;34;40mDEBUG\x1b[0m',f'properties for {tag}\n{props}')
-
 def dpprint(obj,*args,**kwargs):
 	''' debug wrapper for pprint. Each line is output as a debug message. '''
 	if debug_flag:
